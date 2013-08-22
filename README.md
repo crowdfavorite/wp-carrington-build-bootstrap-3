@@ -10,4 +10,4 @@ Note: This plugin will output medium-sized device classes with the prefix `col-m
 
 1. Integrate Carrington Build into your theme
 2. Enqueue Bootstrap's CSS
-3. Install and activate Twitter Bootstrap Grid plugin
+3. Install and activate Twitter Bootstrap for Carrington Build plugin
