@@ -1,0 +1,6 @@
+## Version 1.0.2
+- (change) Rename class so that both Bootstrap compat plugins can be active at the same time
+- (change) Explicit license (GPLv2)
+
+## Version 1.0
+- Initial release.

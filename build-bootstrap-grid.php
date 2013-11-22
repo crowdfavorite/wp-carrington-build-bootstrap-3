@@ -2,15 +2,14 @@
 /**
  * Plugin Name: Twitter Bootstrap for Carrington Build
  * Description: Add in Twitter Bootstrap grid classes and markup for Twitter Bootstrap-compatibility in Carrington Build.
- * Version: 1.0
+ * Version: 1.0.2
  * Author: Crowd Favorite
  * Author URI: http://crowdfavorite.com
  *
- * @package twitter-bootstrap-grid
+ * License: GPLv2
+ * License URI: http://www.gnu.org/licenses/gpl-2.0.html
  *
- * This file is part of the Twitter Bootstrap Grid plugin for WordPress
- *
- * Copyright (c) 2008-2013 Crowd Favorite, Ltd. All rights reserved.
+ * Copyright (c) 2013 Crowd Favorite, Ltd. All rights reserved.
  * http://crowdfavorite.com
  *
  * **********************************************************************
@@ -20,7 +19,7 @@
  * **********************************************************************
 **/
  
-class CFCT_Enable_Bootstrap {
+class CFCT_Enable_Bootstrap_3 {
 	public $row_classes_change_map = array();
 	public $block_classes_change_map = array();
 
@@ -62,6 +61,7 @@ class CFCT_Enable_Bootstrap {
 		return $this;
 	}
 
+	// TODO - make this a static function
 	public function attach_hooks() {
 		// Restore generated block ID class
 		add_filter(
@@ -224,9 +224,9 @@ class CFCT_Enable_Bootstrap {
 			add_action('admin_notices', $cb);
 		}
 		else {
-			$instance = new CFCT_Enable_Bootstrap();
+			$instance = new CFCT_Enable_Bootstrap_3();
 			$instance->attach_hooks();
 		}
 	}
 }
-add_action('init', array('CFCT_Enable_Bootstrap', 'init'));
+add_action('init', array('CFCT_Enable_Bootstrap_3', 'init'));
